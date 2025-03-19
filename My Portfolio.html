@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamal Sai Reddy - Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+        
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(120deg, #00c6ff, #007BFF, #ff00cc); 
+            background-size: 200% 200%;
+            animation: gradientBG 10s ease infinite;
+            transition: background 0.5s, color 0.5s;
+            scroll-behavior: smooth;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        nav { 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            background: rgba(0, 123, 255, 0.9); 
+            padding: 18px 0; 
+            text-align: center; 
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2); 
+            z-index: 1000; 
+        }
+        nav a { 
+            color: #fff; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #ffeb3b; }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*wu4SzMFRMzl5Cz0PlhV5XA.gif') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+        .hero h1 {
+            font-size: 40px;
+            margin: 10px 0;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 4px solid #fff;
+            width: fit-content;
+            animation: typing 3s steps(30) infinite alternate;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .hero p {
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px;
+            border-radius: 10px;
+        }
+        
+        section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.5s ease-in-out, opacity 0.8s ease-out;
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            color: #007BFF;
+            font-size: 28px;
+            border-bottom: 3px solid #007BFF;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .cards { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+        .card {
+            background: linear-gradient(135deg, #00c6ff, #007BFF);
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover { transform: scale(1.1); }
+        
+        .contact {
+            text-align: center;
+            padding: 30px;
+            background: #007BFF;
+            color: #fff;
+            margin-top: 80px;
+            border-radius: 0 0 15px 15px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+    </nav>
+<div class="Hero">
+        <h1>Kamal Sai Reddy</h1>
+        <p>IT Recruitment Expert | Recruitment Specialist at SansaOne IT Solutions | Specializing in sourcing and attracting top tech talent | Passionate about fostering meaningful connections between candidates and clients.</p>
+        <p>Computer Science graduate with a strong foundation in programming languages like Python, SQL, C, HTML, C++. Seeking a challenging role in software development to leverage my problem-solving skills and contribute to innovative projects. Eager to learn and grow in a dynamic tech environment.</p>
+    </div>
+
+     <section id="about">
+        <h2>About</h2>
+        <p><strong>Name:</strong> Kamal Sai Reddy</p>
+        <p><strong>Current Profession:</strong> Recruiting</p>
+        <p><strong>Current Location:</strong> Hyderabad</p>
+        <p><strong>Current Designation:</strong> Talent Acquisition Consultant</p>
+    </section>
+    <section id="education">
+
+        <h2>Education</h2>
+        <p><strong>Bachelor of Technology - Computer Science</strong><br> Abdul Kalam Institute of Technological Sciences (2020 - 2024) | CGPA: 7.14</p>
+        <p><strong>Intermediate - MPC</strong><br> Race IIT & Medical Academy (2018 - 2020) | Marks: 888</p>
+        <p><strong>SSC - Telangana</strong><br> Krishnaveni High School (2018) | CGPA: 8.7</p>
+
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="cards">
+            <div class="card">SQL</div>
+            <div class="card">Power BI</div>
+            <div class="card">Python</div>
+            <div class="card">Data Science</div>
+            <div class="card">IT Recruitment</div>
+            <div class="card">Business Analytics</div>
+ 	    <div class="card">Data Visualisation</div>
+ 	    <div class="card">Tableau</div>
+ 	    <div class="card">Data base management system(DBMS)</div>
+ 	    <div class="card">Hiring</div>
+  	    <div class="card">Screening CV's, Candidates</div>
+            <div class="card">Resume making</div>
+	    <div class="card">Technical Support</div>
+	    <div class="card">IT Relationship Management</div>
+	    <div class="card">Matplotlib</div>
+	    <div class="card">Databases</div>
+	    <div class="card">C (Programming Language)</div>
+        </div>
+    </section>
+    
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Closing the Green Skills Gap to Power a Greener Economy and Drive Sustainability - Linkedin</li>
+            <li>Including Sustainability in Your Cloud Strategy - LinkedIn</li>
+            <li>Data Science using Python & R - 360 DigiTMG</li>
+            <li>Python for Data Science - Infosys</li>
+	    <li>Microsoft Cloud for Sustainability: ESG and the Future of Business - Linkedin</li>
+	    <li>Sustainability Foundations: Core Concepts - Linkedin</li>
+	    <li>Sustainability as an Innovation Opportunity - Linkedin</li>
+	    <li>Professional Program on Data Science- 360 DigiTMG</li>
+	    <li>Analyzing and Visualizing Data with Microsoft Power BI- 360 DigiTMG</li>
+	    <li>Python Programming - 360 DigiTMG</li>
+        </ul>
+    </section>
+
+   <section id="interests">
+       <h2>Interests</h2>
+       <ul>
+           <li>Data Science</li>
+           <li>Data Analytics</li>
+           <li>Business Analytics</li>
+           <li>Human Resources Management</li>
+           <li>IT Recruiting</li>
+       </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:kamalsaireddy@gmail.com">kamalsaireddy@gmail.com</a></p>
+        <p>Phone: <a href="tel:9347045285">9347045285</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/kamal-sai-reddy-a244a526b" target="_blank">kamal-sai-reddy</a></p>
+    </section>
+</body>
+</html>
